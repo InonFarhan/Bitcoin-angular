@@ -1,0 +1,51 @@
+.sign-up-login {
+    img {
+        width: 5em;
+        border-radius: 50%;
+        margin-block: 1em;
+    }
+
+    .links>* {
+        margin-block: 1em;
+    }
+
+    .login,
+    .signUp {
+        text-decoration: underline;
+    }
+}
+
+.sign-up-preview,
+.login-preview {
+    img {
+        width: 5em;
+        border-radius: 50%;
+        margin-block: 1em;
+    }
+
+    form {
+        margin: auto;
+        margin-block-start: 1em;
+        text-align: start;
+        width: 15em;
+    }
+
+    button {
+        width: auto;
+        align-self: center;
+    }
+
+    input {
+        margin-block-end: 2em;
+    }
+
+    .back {
+        cursor: pointer;
+        position: fixed;
+        top: 2.5em;
+        left: 1em;
+        height: 1.5em;
+        width: 1.5em;
+        padding: 0.2em;
+    }
+}
