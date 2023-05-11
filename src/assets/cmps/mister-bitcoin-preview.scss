@@ -1,0 +1,44 @@
+.contacts-list-preview {
+    .contact-preview {
+        background-color: $clr5;
+        color: rgb(38, 37, 37);
+        border-radius: 555px;
+        align-items: center;
+        margin-block-start: 1em;
+
+        p {
+            margin-inline-start: 0.5em;
+        }
+
+        img {
+            width: 3em;
+        }
+
+        section {
+            width: 100%;
+            justify-content: space-between;
+        }
+    }
+
+    @include for-tablet-layout {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3em;
+
+        .contact-preview {
+            border-radius: 20%;
+            height: 10em;
+            flex-direction: column;
+            background: none;
+
+            img {
+                width: 5em;
+            }
+
+            a:hover {
+                color: lighten($clr3, 50%);
+                background: none;
+            }
+        }
+    }
+}

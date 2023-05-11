@@ -1,0 +1,9 @@
+<section class="move-preview flex column">
+    <a *ngIf="contact" routerLink="/contact/{{contact._id}}">
+        <p class="to">To: <span>{{contact.name}}</span></p>
+    </a>
+    <section class="info">
+        <p>At: {{move.at|date:'d/M/yyyy'}}</p>
+        <p> Amount: {{move.amount}}</p>
+    </section>
+</section>

@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+// Externals
+
+// Setup
+@import "assets/setup/variables.scss";
+@import "assets/setup/mixins.scss";
+
+// Basics
+@import "assets/basics/typography.scss";
+@import "assets/basics/base.scss";
+@import "assets/basics/helpers.scss";
+@import "assets/basics/layout.scss";
+@import "assets/basics/modals.scss";
+@import "assets/basics/animations.scss";
+
+// Views
+@import "assets/views/mister-bitcoin-contactPage.scss";
+@import "assets/views/mister-bitcoin-details.scss";
+@import "assets/views/mister-bitcoin-edit.scss";
+@import "assets/views/LoginSignUp.scss";
+
+// Components
+@import "assets/cmps/home-page-preview.scss";
+@import "assets/cmps/mister-bitcoin-preview.scss";
+@import "assets/cmps/app-header.scss";
+
+router-outlet {
+    display: none;
+}
+
+.main-app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    main {
+
+        flex-grow: 1;
+        width: 100%;
+    }
+
+    >.footer {
+        z-index: 1;
+        display: flex;
+        position: sticky;
+        bottom: 0;
+        margin-block-start: 1em;
+        width: 100%;
+        background-color: $clr3;
+        color: $clr5;
+        height: 1.5em;
+        justify-content: center;
+
+        >* {
+            align-self: center;
+        }
+    }
+}

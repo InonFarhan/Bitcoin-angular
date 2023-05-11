@@ -1,0 +1,9 @@
+<section *ngIf="contacts?.length; else noContacts" class="contacts-list-preview">
+    <app-contact-preview *ngFor="let contact of contacts" [contact]="contact"></app-contact-preview>
+</section>
+
+<ng-template #noContacts>
+    <section>
+        <p>Loading...</p>
+    </section>
+</ng-template>

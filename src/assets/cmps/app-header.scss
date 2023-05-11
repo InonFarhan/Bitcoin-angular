@@ -1,0 +1,22 @@
+.app-header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: $clr3;
+    margin-block-end: 1em;
+
+    h1.logo {
+        flex-grow: 1;
+        font-weight: 600;
+    }
+
+    justify-content: center;
+
+    nav {
+        img {
+            width: 2em;
+        }
+
+        gap: 1em;
+    }
+}

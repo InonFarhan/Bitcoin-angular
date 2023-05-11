@@ -1,0 +1,19 @@
+<section *ngIf="user" class="sign-up">
+    <section class='sign-up-preview'>
+        <img class="bitcoin-logo" src="../../../assets/svgs/bitcoin.svg" alt="bitcoin" />
+        <section>
+            <form class='flex column' (ngSubmit)="onSignUp($event)">
+                <input placeholder='User name' value={{user.name}} [(ngModel)]="user.name" type="text" name="name"
+                    id="name" />
+                <input placeholder='Password' value={{user.password}} [(ngModel)]="user.password" type="text"
+                    name="password" id="password" />
+                <input placeholder='Email' value={{user.email}} [(ngModel)]="user.email" type="email" name="email"
+                    id="email" />
+                <input placeholder='Phone' value={{user.phone}} [(ngModel)]="user.phone" type="text" name="phone"
+                    id="phone" />
+                <button>Sign up</button>
+            </form>
+        </section>
+        <img class="back" (click)="onBack()" src="../../../assets/svgs/arrow_back.svg" alt="arrow_back" />
+    </section>
+</section>

@@ -1,0 +1,9 @@
+<section class="TransferFund-preview">
+    Transfer coins to {{contact.name}}:
+    <form class="flex space-between" (ngSubmit)="onTransfer($event)">
+        <label for="amount">Amount</label>
+        <input [(ngModel)]="amount" (ngModelChange)="updateAmount($event)" value="{{amount}}" type="number"
+            name="amount" id="amount" />
+        <button type="submit">Transfer</button>
+    </form>
+</section>

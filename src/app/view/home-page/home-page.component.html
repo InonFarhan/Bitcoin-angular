@@ -1,0 +1,41 @@
+<section *ngIf="user; else loading" class="home-page-preview">
+
+    <section class="info">
+        <h1 class="user-name">Hello {{user.name}}!
+            <a class="edit" routerLink="/contact/edit/{{user._id}}">
+                <img src="../../../assets/svgs/edit.svg" alt="edit" />
+            </a>
+        </h1>
+        <section class="flex space-between">
+            <section class="balance">
+                <p class="user-coins flex"><img src="../../../assets//svgs/dollar.svg" alt="dollar" /> Coins:
+                    ${{user.coins}}</p>
+                <p class="user-btc flex"> <img src="../../../assets/svgs/bit.svg" alt="bitcoin" /> BTC: {{btc}}</p>
+            </section>
+        </section>
+    </section>
+
+    <section *ngIf="user.moves.length; else noMoves" class="last-moves">
+        <h1 *ngIf="user.moves.slice(0, 3).length > 1; else oneMove">Your last {{user.moves.slice(0, 3).length}} moves:
+        </h1>
+        <ng-template #oneMove>
+            <h1>Your last move:</h1>
+        </ng-template>
+        <app-move-list *ngIf="contacts" [moves]="user.moves.slice(0, 3)" [contacts]="contacts"></app-move-list>
+    </section>
+
+    <ng-template #noMoves>
+        <section class="last-moves">
+            <h1>You have no moves yet.</h1>
+        </section>
+    </ng-template>
+
+    <button class="Logout" (click)="onLogout()">Logout</button>
+</section>
+
+<ng-template #loading>
+    <section>
+        <p>Loading...</p>
+    </section>
+</ng-template>
+<router-outlet></router-outlet>

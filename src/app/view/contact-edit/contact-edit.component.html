@@ -1,0 +1,26 @@
+<section *ngIf="contact" class='edit-preview'>
+    <section class="actions flex">
+        <img class="back" (click)="onBack()" src="../../../assets//svgs/arrow_back.svg" alt="arrow_back" />
+    </section>
+    <section class='contact-edit'>
+        <h1>{{contact._id ? 'Edit profile' : 'Add contact'}} </h1>
+        <form (ngSubmit)="onSaveContact($event)">
+
+            <section *ngIf="contact._id">
+                <section class="input flex"> <label for="name">Name</label>
+                    <input value={{contact.name}} [(ngModel)]="contact.name" type="text" name="name" id="name" />
+                </section>
+                <section class="input flex">
+                    <label for="email">Email</label>
+                    <input value={{contact.email}} [(ngModel)]="contact.email" type="text" name="email" id="email" />
+                </section>
+            </section>
+
+            <section class="input flex">
+                <label for="phone">Phone</label>
+                <input value={{contact.phone}} [(ngModel)]="contact.phone" type="text" name="phone" id="phone" />
+            </section>
+            <button>{{contact._id ? 'Save' : 'Add'}}</button>
+        </form>
+    </section>
+</section>

@@ -1,0 +1,8 @@
+<section *ngIf="contact" class="contact-preview flex">
+    <img [src]="'https://robohash.org/set_set5/' + contact._id" alt="profile" />
+    <section class="flex">
+        <a routerLink="/contact/{{contact._id}}">
+            <p>{{contact.name}}</p>
+        </a>
+    </section>
+</section>

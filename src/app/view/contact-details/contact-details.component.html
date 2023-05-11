@@ -1,0 +1,24 @@
+<section *ngIf="user && contact" class="details-preview">
+    <section class="actions flex space-between">
+        <img class="back" (click)="onBack()" src="../../../assets//svgs/arrow_back.svg" alt="arrow_back" />
+        <img class="remove" (click)="onDelete()" src="../../../assets//svgs/delete.svg" alt="remove" />
+    </section>
+    <section class="contact-details">
+        <img [src]="'https://robohash.org/set_set5/' + contact._id" alt="profile" />
+        <p>Name: {{contact.name}}</p>
+        <p>Phone: {{contact.phone}}</p>
+        <p>Email: {{contact.email}}</p>
+    </section>
+    <section class="transfer">
+        <app-transfer-fund [contact]="contact" [coins]="user.coins"></app-transfer-fund>
+    </section>
+    <section *ngIf="moves; else noMoves" class="moves">
+        <h1>Your moves:</h1>
+        <app-move-list [moves]="moves"></app-move-list>
+    </section>
+    <ng-template #noMoves>
+        <section class="last-moves">
+            <h1>You have no moves yet.</h1>
+        </section>
+    </ng-template>
+</section>

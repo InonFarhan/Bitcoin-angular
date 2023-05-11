@@ -1,0 +1,16 @@
+<section *ngIf="contacts; else loading" class="contacts-list">
+
+    <app-contact-filter></app-contact-filter>
+
+    <a routerLink="/contact/edit" class="add">
+        <img src="../../../assets/svgs/add.svg" alt="add" />
+    </a>
+
+    <app-contact-list [contacts]="contacts"></app-contact-list>
+</section>
+
+<ng-template #loading>
+    <section>
+        <p>Loading...</p>
+    </section>
+</ng-template>
