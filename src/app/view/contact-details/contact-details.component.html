@@ -1,7 +1,7 @@
 <section *ngIf="user && contact" class="details-preview">
     <section class="actions flex space-between">
-        <img class="back" (click)="onBack()" src="../../../assets//svgs/arrow_back.svg" alt="arrow_back" />
-        <img class="remove" (click)="onDelete()" src="../../../assets//svgs/delete.svg" alt="remove" />
+        <img class="back" (click)="onBack()" src="assets//svgs/arrow_back.svg" alt="arrow_back" />
+        <img class="remove" (click)="onDelete()" src="assets//svgs/delete.svg" alt="remove" />
     </section>
     <section class="contact-details">
         <img [src]="'https://robohash.org/set_set5/' + contact._id" alt="profile" />

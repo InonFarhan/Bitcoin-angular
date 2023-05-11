@@ -1,6 +1,6 @@
 <section class="login">
     <section class='login-preview'>
-        <img class="bitcoin-logo" src="../../../assets/svgs/bitcoin.svg" alt="bitcoin" />
+        <img class="bitcoin-logo" src="assets/svgs/bitcoin.svg" alt="bitcoin" />
         <section>
             <form class='flex column' (ngSubmit)="onLogin($event)">
                 <input placeholder='User name' value={{user.name}} [(ngModel)]="user.name" type="text" name="name"
@@ -10,6 +10,6 @@
                 <button>Login</button>
             </form>
         </section>
-        <img class="back" (click)="onBack()" src="../../../assets/svgs/arrow_back.svg" alt="arrow_back" />
+        <img class="back" (click)="onBack()" src="assets/svgs/arrow_back.svg" alt="arrow_back" />
     </section>
 </section>

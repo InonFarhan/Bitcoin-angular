@@ -3,14 +3,14 @@
     <section class="info">
         <h1 class="user-name">Hello {{user.name}}!
             <a class="edit" routerLink="/contact/edit/{{user._id}}">
-                <img src="../../../assets/svgs/edit.svg" alt="edit" />
+                <img src="assets/svgs/edit.svg" alt="edit" />
             </a>
         </h1>
         <section class="flex space-between">
             <section class="balance">
-                <p class="user-coins flex"><img src="../../../assets//svgs/dollar.svg" alt="dollar" /> Coins:
+                <p class="user-coins flex"><img src="assets//svgs/dollar.svg" alt="dollar" /> Coins:
                     ${{user.coins}}</p>
-                <p class="user-btc flex"> <img src="../../../assets/svgs/bit.svg" alt="bitcoin" /> BTC: {{btc}}</p>
+                <p class="user-btc flex"> <img src="assets/svgs/bit.svg" alt="bitcoin" /> BTC: {{btc}}</p>
             </section>
         </section>
     </section>
